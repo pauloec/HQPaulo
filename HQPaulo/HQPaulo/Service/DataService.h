@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface DataService : NSObject
-
+- (NSArray *)countriesForJson;
 @end

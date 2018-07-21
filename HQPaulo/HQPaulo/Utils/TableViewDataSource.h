@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface TableViewDataSource : NSObject
+typedef void (^TableViewBlock)(id cell, id item);
 
+@interface TableViewDataSource : NSObject <UITableViewDataSource>
+- (instancetype)initCellIdentifier:(NSString *)cellIdentifier configureCell:(TableViewBlock)cellBlock items:(NSArray *)items;
+- (id)itemAtIndexPath:(NSIndexPath *)indexPath;
+@property (nonatomic, copy) NSArray *items;
 @end

@@ -9,14 +9,14 @@
 #import "CountryModel.h"
 
 @interface CountryModel ()
-@property (nonatomic, readwrite) NSString *flagImageUrl;
+@property (nonatomic, readwrite) NSURL *flagImageUrl;
 @property (nonatomic, readwrite) NSString *name;
 @end
 
-@implementation Country
+@implementation CountryModel
 - (void)setValue:(id)value forKey:(NSString *)key {
     if ([key isEqualToString:@"flag_image_url"]) {
-        self.flagImageUrl = value;
+        self.flagImageUrl = [NSURL URLWithString:value];
     }
     
     if ([key isEqualToString:@"country_name"]) {

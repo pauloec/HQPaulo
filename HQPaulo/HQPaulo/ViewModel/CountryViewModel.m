@@ -9,5 +9,10 @@
 #import "CountryViewModel.h"
 
 @implementation CountryViewModel
-
+- (instancetype)initWithCountries:(NSArray *)countries {
+    if (self) {
+        _countries = countries;
+    }
+    return self;
+}
 @end

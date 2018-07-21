@@ -10,6 +10,6 @@
 
 @interface CountryModel : NSObject
 @property (nonatomic, copy) NSArray *cities;
-@property (nonatomic, readonly) NSString *flagImageUrl;
+@property (nonatomic, readonly) NSURL *flagImageUrl;
 @property (nonatomic, readonly) NSString *name;
 @end

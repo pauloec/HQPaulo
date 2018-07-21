@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface CountryViewModel : NSObject
-
+- (instancetype)initWithCountries:(NSArray *)countries;
+@property (nonatomic, copy) NSArray *countries;
 @end
