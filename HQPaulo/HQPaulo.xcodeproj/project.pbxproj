@@ -13,6 +13,12 @@
 		E0CB93DD2102757A00EDCFAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E0CB93DC2102757A00EDCFAE /* Assets.xcassets */; };
 		E0CB93E02102757A00EDCFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0CB93DE2102757A00EDCFAE /* LaunchScreen.storyboard */; };
 		E0CB93E32102757A00EDCFAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB93E22102757A00EDCFAE /* main.m */; };
+		E0CB93F321028E0B00EDCFAE /* CountryViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB93F221028E0B00EDCFAE /* CountryViewModel.m */; };
+		E0CB93F621028E3300EDCFAE /* CountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB93F521028E3300EDCFAE /* CountryViewController.m */; };
+		E0CB93F921028EAB00EDCFAE /* TableViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB93F821028EAB00EDCFAE /* TableViewDataSource.m */; };
+		E0CB93FD2102941000EDCFAE /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB93FC2102941000EDCFAE /* DataService.m */; };
+		E0CB940021029B3200EDCFAE /* country_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E0CB93FF21029B3200EDCFAE /* country_data.json */; };
+		E0CB94032102A03700EDCFAE /* CountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB94022102A03700EDCFAE /* CountryModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,17 @@
 		E0CB93DF2102757A00EDCFAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E0CB93E12102757A00EDCFAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E0CB93E22102757A00EDCFAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E0CB93F121028E0B00EDCFAE /* CountryViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryViewModel.h; sourceTree = "<group>"; };
+		E0CB93F221028E0B00EDCFAE /* CountryViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryViewModel.m; sourceTree = "<group>"; };
+		E0CB93F421028E3300EDCFAE /* CountryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryViewController.h; sourceTree = "<group>"; };
+		E0CB93F521028E3300EDCFAE /* CountryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryViewController.m; sourceTree = "<group>"; };
+		E0CB93F721028EAB00EDCFAE /* TableViewDataSource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TableViewDataSource.h; sourceTree = "<group>"; };
+		E0CB93F821028EAB00EDCFAE /* TableViewDataSource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableViewDataSource.m; sourceTree = "<group>"; };
+		E0CB93FB2102941000EDCFAE /* DataService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataService.h; sourceTree = "<group>"; };
+		E0CB93FC2102941000EDCFAE /* DataService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DataService.m; sourceTree = "<group>"; };
+		E0CB93FF21029B3200EDCFAE /* country_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_data.json; sourceTree = "<group>"; };
+		E0CB94012102A03700EDCFAE /* CountryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryModel.h; sourceTree = "<group>"; };
+		E0CB94022102A03700EDCFAE /* CountryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryModel.m; sourceTree = "<group>"; };
 		FDC0139DD0B528F9CB683D4E /* Pods-HQPaulo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQPaulo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQPaulo/Pods-HQPaulo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,8 +96,9 @@
 		E0CB93D22102757900EDCFAE /* HQPaulo */ = {
 			isa = PBXGroup;
 			children = (
-				E0CB93ED21028ABE00EDCFAE /* Utils */,
 				E0CB93EC210276AE00EDCFAE /* Resource */,
+				E0CB93FA2102930C00EDCFAE /* Service */,
+				E0CB93ED21028ABE00EDCFAE /* Utils */,
 				E0CB93E92102768C00EDCFAE /* Model */,
 				E0CB93EA2102769100EDCFAE /* ViewModel */,
 				E0CB93EB2102769900EDCFAE /* View */,
@@ -95,6 +113,8 @@
 		E0CB93E92102768C00EDCFAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E0CB94012102A03700EDCFAE /* CountryModel.h */,
+				E0CB94022102A03700EDCFAE /* CountryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -102,6 +122,8 @@
 		E0CB93EA2102769100EDCFAE /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E0CB93F121028E0B00EDCFAE /* CountryViewModel.h */,
+				E0CB93F221028E0B00EDCFAE /* CountryViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -109,6 +131,8 @@
 		E0CB93EB2102769900EDCFAE /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E0CB93F421028E3300EDCFAE /* CountryViewController.h */,
+				E0CB93F521028E3300EDCFAE /* CountryViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -116,6 +140,7 @@
 		E0CB93EC210276AE00EDCFAE /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E0CB93FE21029B1D00EDCFAE /* Data */,
 				E0CB93D92102757A00EDCFAE /* Main.storyboard */,
 				E0CB93DC2102757A00EDCFAE /* Assets.xcassets */,
 				E0CB93DE2102757A00EDCFAE /* LaunchScreen.storyboard */,
@@ -126,8 +151,27 @@
 		E0CB93ED21028ABE00EDCFAE /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				E0CB93F721028EAB00EDCFAE /* TableViewDataSource.h */,
+				E0CB93F821028EAB00EDCFAE /* TableViewDataSource.m */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E0CB93FA2102930C00EDCFAE /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				E0CB93FB2102941000EDCFAE /* DataService.h */,
+				E0CB93FC2102941000EDCFAE /* DataService.m */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		E0CB93FE21029B1D00EDCFAE /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				E0CB93FF21029B3200EDCFAE /* country_data.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -190,6 +234,7 @@
 			files = (
 				E0CB93E02102757A00EDCFAE /* LaunchScreen.storyboard in Resources */,
 				E0CB93DD2102757A00EDCFAE /* Assets.xcassets in Resources */,
+				E0CB940021029B3200EDCFAE /* country_data.json in Resources */,
 				E0CB93DB2102757A00EDCFAE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,6 +267,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CB94032102A03700EDCFAE /* CountryModel.m in Sources */,
+				E0CB93F921028EAB00EDCFAE /* TableViewDataSource.m in Sources */,
+				E0CB93FD2102941000EDCFAE /* DataService.m in Sources */,
+				E0CB93F621028E3300EDCFAE /* CountryViewController.m in Sources */,
+				E0CB93F321028E0B00EDCFAE /* CountryViewModel.m in Sources */,
 				E0CB93E32102757A00EDCFAE /* main.m in Sources */,
 				E0CB93D52102757900EDCFAE /* AppDelegate.m in Sources */,
 			);
