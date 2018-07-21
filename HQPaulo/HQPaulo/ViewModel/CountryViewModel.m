@@ -10,6 +10,7 @@
 
 @implementation CountryViewModel
 - (instancetype)initWithCountries:(NSArray *)countries {
+    self = [super init];
     if (self) {
         _countries = countries;
     }

@@ -7,6 +7,7 @@
 //
 
 #import "CountryModel.h"
+#import "CityModel.h"
 #import "DataService.h"
 
 @implementation DataService
@@ -19,7 +20,19 @@
     for (NSDictionary *tempCountry in [jsonObject objectForKey:@"countries"]) {
         CountryModel *country = [CountryModel new];
         for (NSString *key in tempCountry) {
-            [country setValue:[tempCountry objectForKey:key] forKey:key];
+            if ([key isEqualToString:@"cities"]) {
+                NSMutableArray *cities = [NSMutableArray new];
+                for (NSDictionary *tempCity in [tempCountry objectForKey:key]) {
+                    CityModel *city = [CityModel new];
+                    for (NSString *keyCity in tempCity) {
+                        [city setValue:[tempCity objectForKey:keyCity] forKey:keyCity];
+                    }
+                    [cities addObject:city];
+                }
+                [country setValue:cities forKey:key];
+            } else {
+                [country setValue:[tempCountry objectForKey:key] forKey:key];
+            }
         }
         [countries addObject:country];
     }
