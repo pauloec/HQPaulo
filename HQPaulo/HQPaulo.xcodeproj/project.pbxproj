@@ -22,6 +22,10 @@
 		E0CB940A2102DE8900EDCFAE /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB94082102DE8900EDCFAE /* CityModel.m */; };
 		E0CB940D2102DE9800EDCFAE /* CityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB940C2102DE9800EDCFAE /* CityViewModel.m */; };
 		E0CB94102102DEB100EDCFAE /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB940F2102DEB100EDCFAE /* CityViewController.m */; };
+		E0CB94192102F50A00EDCFAE /* WeatherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB94162102F50900EDCFAE /* WeatherViewController.m */; };
+		E0CB941A2102F50A00EDCFAE /* WeatherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E0CB94172102F50900EDCFAE /* WeatherViewController.xib */; };
+		E0CB941D2102F52900EDCFAE /* WeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB941C2102F52900EDCFAE /* WeatherViewModel.m */; };
+		E0CB94202102F54000EDCFAE /* WeatherModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB941F2102F54000EDCFAE /* WeatherModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +56,13 @@
 		E0CB940C2102DE9800EDCFAE /* CityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityViewModel.m; sourceTree = "<group>"; };
 		E0CB940E2102DEB100EDCFAE /* CityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
 		E0CB940F2102DEB100EDCFAE /* CityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
+		E0CB94162102F50900EDCFAE /* WeatherViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewController.m; sourceTree = "<group>"; };
+		E0CB94172102F50900EDCFAE /* WeatherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WeatherViewController.xib; sourceTree = "<group>"; };
+		E0CB94182102F50900EDCFAE /* WeatherViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewController.h; sourceTree = "<group>"; };
+		E0CB941B2102F52900EDCFAE /* WeatherViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherViewModel.h; sourceTree = "<group>"; };
+		E0CB941C2102F52900EDCFAE /* WeatherViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherViewModel.m; sourceTree = "<group>"; };
+		E0CB941E2102F54000EDCFAE /* WeatherModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeatherModel.h; sourceTree = "<group>"; };
+		E0CB941F2102F54000EDCFAE /* WeatherModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WeatherModel.m; sourceTree = "<group>"; };
 		FDC0139DD0B528F9CB683D4E /* Pods-HQPaulo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQPaulo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQPaulo/Pods-HQPaulo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,6 +137,8 @@
 				E0CB94082102DE8900EDCFAE /* CityModel.m */,
 				E0CB94012102A03700EDCFAE /* CountryModel.h */,
 				E0CB94022102A03700EDCFAE /* CountryModel.m */,
+				E0CB941E2102F54000EDCFAE /* WeatherModel.h */,
+				E0CB941F2102F54000EDCFAE /* WeatherModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -137,6 +150,8 @@
 				E0CB93F221028E0B00EDCFAE /* CountryViewModel.m */,
 				E0CB940B2102DE9800EDCFAE /* CityViewModel.h */,
 				E0CB940C2102DE9800EDCFAE /* CityViewModel.m */,
+				E0CB941B2102F52900EDCFAE /* WeatherViewModel.h */,
+				E0CB941C2102F52900EDCFAE /* WeatherViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +163,9 @@
 				E0CB93F521028E3300EDCFAE /* CountryViewController.m */,
 				E0CB940E2102DEB100EDCFAE /* CityViewController.h */,
 				E0CB940F2102DEB100EDCFAE /* CityViewController.m */,
+				E0CB94182102F50900EDCFAE /* WeatherViewController.h */,
+				E0CB94162102F50900EDCFAE /* WeatherViewController.m */,
+				E0CB94172102F50900EDCFAE /* WeatherViewController.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -247,6 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CB941A2102F50A00EDCFAE /* WeatherViewController.xib in Resources */,
 				E0CB93E02102757A00EDCFAE /* LaunchScreen.storyboard in Resources */,
 				E0CB93DD2102757A00EDCFAE /* Assets.xcassets in Resources */,
 				E0CB940021029B3200EDCFAE /* country_data.json in Resources */,
@@ -283,14 +302,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0CB940A2102DE8900EDCFAE /* CityModel.m in Sources */,
+				E0CB941D2102F52900EDCFAE /* WeatherViewModel.m in Sources */,
 				E0CB94032102A03700EDCFAE /* CountryModel.m in Sources */,
 				E0CB93F921028EAB00EDCFAE /* TableViewDataSource.m in Sources */,
 				E0CB93FD2102941000EDCFAE /* DataService.m in Sources */,
+				E0CB94192102F50A00EDCFAE /* WeatherViewController.m in Sources */,
 				E0CB93F621028E3300EDCFAE /* CountryViewController.m in Sources */,
 				E0CB940D2102DE9800EDCFAE /* CityViewModel.m in Sources */,
 				E0CB93F321028E0B00EDCFAE /* CountryViewModel.m in Sources */,
 				E0CB94102102DEB100EDCFAE /* CityViewController.m in Sources */,
 				E0CB93E32102757A00EDCFAE /* main.m in Sources */,
+				E0CB94202102F54000EDCFAE /* WeatherModel.m in Sources */,
 				E0CB93D52102757900EDCFAE /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
