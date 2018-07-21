@@ -20,8 +20,6 @@
 @end
 
 @implementation AppDelegate
-
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.navigationController = [UINavigationController new];
     
@@ -39,5 +37,4 @@
     self.viewModel = [[CountryViewModel alloc] initWithCountries:[self.viewModelService countriesForJson]];
     return [[CountryViewController alloc] initWithViewModel:self.viewModel];
 }
-
 @end

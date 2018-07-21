@@ -19,6 +19,9 @@
 		E0CB93FD2102941000EDCFAE /* DataService.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB93FC2102941000EDCFAE /* DataService.m */; };
 		E0CB940021029B3200EDCFAE /* country_data.json in Resources */ = {isa = PBXBuildFile; fileRef = E0CB93FF21029B3200EDCFAE /* country_data.json */; };
 		E0CB94032102A03700EDCFAE /* CountryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB94022102A03700EDCFAE /* CountryModel.m */; };
+		E0CB940A2102DE8900EDCFAE /* CityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB94082102DE8900EDCFAE /* CityModel.m */; };
+		E0CB940D2102DE9800EDCFAE /* CityViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB940C2102DE9800EDCFAE /* CityViewModel.m */; };
+		E0CB94102102DEB100EDCFAE /* CityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E0CB940F2102DEB100EDCFAE /* CityViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +46,12 @@
 		E0CB93FF21029B3200EDCFAE /* country_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = country_data.json; sourceTree = "<group>"; };
 		E0CB94012102A03700EDCFAE /* CountryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountryModel.h; sourceTree = "<group>"; };
 		E0CB94022102A03700EDCFAE /* CountryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountryModel.m; sourceTree = "<group>"; };
+		E0CB94082102DE8900EDCFAE /* CityModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModel.m; sourceTree = "<group>"; };
+		E0CB94092102DE8900EDCFAE /* CityModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModel.h; sourceTree = "<group>"; };
+		E0CB940B2102DE9800EDCFAE /* CityViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityViewModel.h; sourceTree = "<group>"; };
+		E0CB940C2102DE9800EDCFAE /* CityViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityViewModel.m; sourceTree = "<group>"; };
+		E0CB940E2102DEB100EDCFAE /* CityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CityViewController.h; sourceTree = "<group>"; };
+		E0CB940F2102DEB100EDCFAE /* CityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CityViewController.m; sourceTree = "<group>"; };
 		FDC0139DD0B528F9CB683D4E /* Pods-HQPaulo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HQPaulo.release.xcconfig"; path = "Pods/Target Support Files/Pods-HQPaulo/Pods-HQPaulo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +122,8 @@
 		E0CB93E92102768C00EDCFAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E0CB94092102DE8900EDCFAE /* CityModel.h */,
+				E0CB94082102DE8900EDCFAE /* CityModel.m */,
 				E0CB94012102A03700EDCFAE /* CountryModel.h */,
 				E0CB94022102A03700EDCFAE /* CountryModel.m */,
 			);
@@ -124,6 +135,8 @@
 			children = (
 				E0CB93F121028E0B00EDCFAE /* CountryViewModel.h */,
 				E0CB93F221028E0B00EDCFAE /* CountryViewModel.m */,
+				E0CB940B2102DE9800EDCFAE /* CityViewModel.h */,
+				E0CB940C2102DE9800EDCFAE /* CityViewModel.m */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -133,6 +146,8 @@
 			children = (
 				E0CB93F421028E3300EDCFAE /* CountryViewController.h */,
 				E0CB93F521028E3300EDCFAE /* CountryViewController.m */,
+				E0CB940E2102DEB100EDCFAE /* CityViewController.h */,
+				E0CB940F2102DEB100EDCFAE /* CityViewController.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -267,11 +282,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0CB940A2102DE8900EDCFAE /* CityModel.m in Sources */,
 				E0CB94032102A03700EDCFAE /* CountryModel.m in Sources */,
 				E0CB93F921028EAB00EDCFAE /* TableViewDataSource.m in Sources */,
 				E0CB93FD2102941000EDCFAE /* DataService.m in Sources */,
 				E0CB93F621028E3300EDCFAE /* CountryViewController.m in Sources */,
+				E0CB940D2102DE9800EDCFAE /* CityViewModel.m in Sources */,
 				E0CB93F321028E0B00EDCFAE /* CountryViewModel.m in Sources */,
+				E0CB94102102DEB100EDCFAE /* CityViewController.m in Sources */,
 				E0CB93E32102757A00EDCFAE /* main.m in Sources */,
 				E0CB93D52102757900EDCFAE /* AppDelegate.m in Sources */,
 			);

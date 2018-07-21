@@ -5,7 +5,7 @@
         {
           "suggested_cities": [],
           "active_flag": true,
-          "city_name": null,
+          "city_name": "Beach City",
           "city_id": 71,
           "weather": {
             "currently": {
@@ -201,7 +201,7 @@
         {
           "suggested_cities": [],
           "active_flag": true,
-          "city_name": null,
+          "city_name": "Sunny Bay",
           "city_id": 174,
           "weather": {
             "currently": {

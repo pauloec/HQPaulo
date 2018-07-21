@@ -11,6 +11,8 @@
 #import "TableViewDataSource.h"
 #import "CountryModel.h"
 #import "CountryViewController.h"
+#import "CityViewModel.h"
+#import "CityViewController.h"
 
 static NSString * const HQCellIdentifier = @"CellIdentifier";
 
@@ -25,6 +27,7 @@ static NSString * const HQCellIdentifier = @"CellIdentifier";
 - (void)viewDidLoad {
     self.title = @"Countries";
     [self setupTableView];
+    [super viewDidLoad];
 }
 
 - (void)updateViewConstraints {
@@ -33,6 +36,10 @@ static NSString * const HQCellIdentifier = @"CellIdentifier";
     }];
     
     [super updateViewConstraints];
+}
+
++ (BOOL)requiresConstraintBasedLayout {
+    return YES;
 }
 
 #pragma mark - Init
@@ -61,12 +68,17 @@ static NSString * const HQCellIdentifier = @"CellIdentifier";
     [self.tableView setDataSource:self.tableViewDataSource];
     [self.tableView setDelegate:self];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:HQCellIdentifier];
-    self.tableView.allowsSelection = NO;
+    self.tableView.allowsSelection = YES;
     [self.view addSubview:self.tableView];
 }
 
-+ (BOOL)requiresConstraintBasedLayout {
-    return YES;
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    CountryModel *country = [self.viewModel.countries objectAtIndex:indexPath.row];
+    NSArray *cities = country.cities;
+    CityViewModel *cityViewModel = [[CityViewModel alloc] initWithCities:cities];
+    CityViewController *cityViewController = [[CityViewController alloc] initWithViewModel:cityViewModel];
+    [cityViewController setTitle:country.name];
+    [self.navigationController pushViewController:cityViewController animated:YES];
 }
 
 @end
