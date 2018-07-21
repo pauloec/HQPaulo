@@ -17,5 +17,9 @@
     if ([key isEqualToString:@"city_name"]) {
         self.name = value;
     }
+    
+    if ([key isEqualToString:@"currently"]) {
+        self.currentWeather = value;
+    }
 }
 @end

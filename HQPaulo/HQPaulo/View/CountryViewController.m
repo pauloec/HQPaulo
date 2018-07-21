@@ -72,6 +72,7 @@ static NSString * const HQCellIdentifier = @"CellIdentifier";
     [self.view addSubview:self.tableView];
 }
 
+#pragma mark - UITableView Delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     CountryModel *country = [self.viewModel.countries objectAtIndex:indexPath.row];
     NSArray *cities = country.cities;

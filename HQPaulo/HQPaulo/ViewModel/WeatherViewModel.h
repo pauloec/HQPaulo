@@ -1,5 +1,5 @@
 //
-//  CityModel.h
+//  WeatherViewModel.h
 //  HQPaulo
 //
 //  Created by Paulo Correa on 21/07/18.
@@ -9,8 +9,8 @@
 #import "WeatherModel.h"
 #import <Foundation/Foundation.h>
 
-@interface CityModel : NSObject
+@interface WeatherViewModel : NSObject
+- (instancetype)initWithForecast:(NSArray *)forecast currentWeather:(WeatherModel *)weather;
 @property (nonatomic, copy) NSArray *forecast;
-@property (nonatomic, copy) WeatherModel *currentWeather;
-@property (nonatomic, readonly) NSString *name;
+@property (nonatomic, copy) WeatherModel *weather;
 @end
