@@ -1,5 +1,5 @@
 //
-//  CountryModel.h
+//  Country.h
 //  HQPaulo
 //
 //  Created by Paulo Correa on 20/07/18.
@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface CountryModel : NSObject
-
+@property (nonatomic, copy) NSArray *cities;
+@property (nonatomic, readonly) NSString *flagImageUrl;
+@property (nonatomic, readonly) NSString *name;
 @end
