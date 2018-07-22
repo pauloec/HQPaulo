@@ -13,4 +13,7 @@
 - (instancetype)initWithForecast:(NSArray *)forecast currentWeather:(WeatherModel *)weather;
 @property (nonatomic, copy) NSArray *forecast;
 @property (nonatomic, copy) WeatherModel *weather;
+- (NSString *)weatherTextForWeather:(WeatherModel *)weather;
+- (NSString *)maxTemp;
+- (NSString *)minTemp;
 @end

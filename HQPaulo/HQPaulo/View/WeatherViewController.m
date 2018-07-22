@@ -34,8 +34,8 @@ static NSString * const HQCellIdentifier = @"CellIdentifier";
 
 #pragma mark - Bind ViewModel
 - (void)bindViewModel {
-    self.labelMaxTemp.text = [NSString stringWithFormat:@"%ld", (long)[self.viewModel.weather.maxTemp integerValue]];
-    self.labelMinTemp.text = [NSString stringWithFormat:@"%ld", (long)[self.viewModel.weather.minTemp integerValue]];
+    self.labelMaxTemp.text = self.viewModel.maxTemp;
+    self.labelMinTemp.text = self.viewModel.minTemp;
     self.labelSummary.text = self.viewModel.weather.summary;
     [self.imageWeather sd_setImageWithURL:self.viewModel.weather.weatherImgURL];
 }
@@ -43,7 +43,7 @@ static NSString * const HQCellIdentifier = @"CellIdentifier";
 #pragma mark - UITableView Datasource
 - (void)setupTableView {
     TableViewBlock tableViewBlock = ^(UITableViewCell *cell, WeatherModel *weather) {
-        cell.textLabel.text = [NSString stringWithFormat:@"Max %ld   Min %ld     %@        ", (long)[weather.maxTemp integerValue], (long)[weather.minTemp integerValue], weather.summary];
+        cell.textLabel.text = [self.viewModel weatherTextForWeather:weather];
         [cell setBackgroundColor:[UIColor clearColor]];
         [cell.imageView sd_setImageWithURL:[weather weatherImgURL] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
             [cell.imageView setImage:image];
