@@ -18,4 +18,16 @@
     return self;
 }
 
+- (NSString *)weatherTextForWeather:(WeatherModel *)weather {
+    return [NSString stringWithFormat:@"Max %ld   Min %ld     %@        ", (long)[weather.maxTemp integerValue], (long)[weather.minTemp integerValue], weather.summary];
+}
+
+- (NSString *)maxTemp {
+    return [NSString stringWithFormat:@"%ld", (long)[self.weather.maxTemp integerValue]];
+}
+
+- (NSString *)minTemp {
+    return [NSString stringWithFormat:@"%ld", (long)[self.weather.minTemp integerValue]];
+}
+
 @end
